@@ -1,0 +1,18 @@
+<div class="container">
+    <button type="button" 
+    (click)="FetchRandomQuote()"
+    class="btn btn-primary">Fetch Random Quote</button>
+
+
+    <br>
+    <hr>
+    <br>
+    <div
+    *ngIf="randomQuote"
+    class="card">
+        <div class="card-body">
+        <h5 class="card-title">Author - {{randomQuote.author}}</h5>
+        <p class="card-text">{{randomQuote.content}}</p>
+        </div>
+    </div>
+</div>

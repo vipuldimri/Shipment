@@ -1,0 +1,67 @@
+
+<h4>Quotes by - Albert Einstein</h4>
+<br>
+
+<h6>Short</h6>
+
+<table class="table table-bordered" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Author</th>
+      <th scope="col">Content</th>
+      <th scope="col">Date Added</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let quote of shortQuotes;index as i;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{quote.author}}</td>
+      <td>{{quote.content}}</td>
+      <td>{{quote.dateAdded}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h6>Medium</h6>
+
+<table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Author</th>
+        <th scope="col">Content</th>
+        <th scope="col">Date Added</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let quote of mediumQotes;index as i;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{quote.author}}</td>
+        <td>{{quote.content}}</td>
+        <td>{{quote.dateAdded}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <h6>Large</h6>
+<table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Author</th>
+        <th scope="col">Content</th>
+        <th scope="col">Date Added</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let quote of largeQuotes;index as i;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{quote.author}}</td>
+        <td>{{quote.content}}</td>
+        <td>{{quote.dateAdded}}</td>
+      </tr>
+    </tbody>
+  </table>

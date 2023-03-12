@@ -1,0 +1,48 @@
+ <div class="container">
+
+    <h4>Shipper list</h4>
+
+    <hr>
+    <div class="card">
+        <ul class="list-group list-group-flush">
+          <li 
+          (click)="FetchShipperShipments(item.shipper_Id)"
+          *ngFor="let item of shipperList"
+          class="list-group-item">{{item.shipper_Name}}
+        </li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <h4>Shipment list</h4>
+      <br>
+
+      <table class="table table-bordered" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Shipment Id</th>
+            <th scope="col">Shipper Name</th>
+            <th scope="col">Carrier Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Rate Description</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let shipment of shipments;index as i;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{shipment.shipment_Id}}</td>
+            <td>{{shipment.shipper_Name}}</td>
+            <td>{{shipment.carrier_Name}}</td>
+            <td>{{shipment.shipment_Description}}</td>
+            <td>{{shipment.shipment_Weight}}</td>
+            <td>{{shipment.shipment_Rate_Description}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+ </div>
